@@ -2,6 +2,10 @@
 
 Chrome 原生侧栏扩展。通过窗口 Tab 查看不同窗口，按完整域名管理所选窗口的标签页，无需构建、注册账号或配置服务。
 
+## 使用示例
+
+![Domain Tabs 浏览器插件使用说明](images/domain-tabs-usage.png)
+
 ## 安装
 
 1. 用 Chrome 打开 `chrome://extensions/`。
