@@ -1,0 +1,14 @@
+README.md
+  h_d4e23c719f9fe1 5-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "350877ee291138d99bf0ce4e31553c778899bcd3",
+  "prompts": {},
+  "humans": {
+    "h_d4e23c719f9fe1": {
+      "author": "zhaohuajian.5 <771679640@qq.com>"
+    }
+  }
+}
