@@ -1,0 +1,50 @@
+.gitignore
+  h_d4e23c719f9fe1 1-4
+README.md
+  h_d4e23c719f9fe1 1-69
+VALIDATION.md
+  h_d4e23c719f9fe1 1-117
+background.js
+  h_d4e23c719f9fe1 1-107
+domain.js
+  h_d4e23c719f9fe1 1-36
+duplicates.js
+  h_d4e23c719f9fe1 1-28
+grouping.js
+  h_d4e23c719f9fe1 1-81
+manifest.json
+  h_d4e23c719f9fe1 1-49
+package.json
+  h_d4e23c719f9fe1 1-9
+panel.css
+  h_d4e23c719f9fe1 1-44
+panel.html
+  h_d4e23c719f9fe1 1-54
+panel.js
+  h_d4e23c719f9fe1 1-543
+reorder.js
+  h_d4e23c719f9fe1 1-25
+side-panel.js
+  h_d4e23c719f9fe1 1-37
+tests/auto-grouping.test.js
+  h_d4e23c719f9fe1 1-88
+tests/domain.test.js
+  h_d4e23c719f9fe1 1-91
+tests/duplicates.test.js
+  h_d4e23c719f9fe1 1-32
+tests/reorder.test.js
+  h_d4e23c719f9fe1 1-42
+tests/side-panel.test.js
+  h_d4e23c719f9fe1 1-42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "00c6a1ef57a1a3d0b165aee5259a03162e344077",
+  "prompts": {},
+  "humans": {
+    "h_d4e23c719f9fe1": {
+      "author": "zhaohuajian.5 <771679640@qq.com>"
+    }
+  }
+}
