@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Domain Tabs · 域名标签管理</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <div class="panel-top">
+  <header class="header">
+    <h1>Domain Tabs</h1>
+    <div class="counts" aria-label="所选窗口概览"><span><strong id="tab-count">0</strong> 标签</span><span>·</span><span><strong id="domain-count">0</strong> 域名</span></div>
+    <div class="settings-anchor">
+      <button id="settings-button" class="icon-button" title="设置" aria-label="设置" aria-expanded="false" aria-controls="settings-menu"></button>
+      <div id="settings-menu" class="settings-menu" hidden>
+        <label class="auto-setting" title="开启后只调整需要归组的标签，保留现有分组顺序和自定义组"><span><strong>自动整理顶部标签</strong></span><input id="auto-group" type="checkbox" role="switch"><span class="switch" aria-hidden="true"></span></label>
+        <button id="position-help" class="settings-item">把侧栏放到左边</button>
+        <button id="help-button" class="settings-item">使用说明</button>
+        <button id="shortcut-settings" class="settings-item">侧栏快捷键设置</button>
+      </div>
+    </div>
+  </header>
+  <div class="panel-controls">
+    <div id="window-tabs" class="window-tabs" role="tablist" aria-label="浏览器窗口" hidden></div>
+    <div id="toolbar-controls" class="toolbar">
+      <div class="search-box"><span id="search-icon" aria-hidden="true"></span><input id="search" type="search" placeholder="搜索标签或域名" aria-label="搜索标签、域名或网址" autocomplete="off" title="搜索标题、域名或网址；按 / 聚焦，Esc 清除"></div>
+      <button id="organize" class="primary-button" title="按域名整理所选窗口的顶部标签" aria-label="按域名整理所选窗口的顶部标签"><span id="organize-label">整理</span></button>
+      <button id="collapse-all" class="icon-button outline" title="收起全部域名" aria-label="收起全部域名"></button>
+      <button id="show-duplicates" class="icon-button outline" title="查看重复标签" aria-label="查看重复标签" aria-pressed="false"></button>
+    </div>
+  </div>
+  </div>
+  <main>
+    <div id="duplicates-bar" hidden><span id="duplicates-count"></span><button id="close-duplicates" class="text-button">一键清理</button><button id="exit-duplicates" class="text-button">返回全部</button></div>
+    <span id="search-status" class="sr-only" role="status" aria-live="polite"></span>
+    <div id="tab-list" role="tabpanel" aria-label="所选窗口中按域名分组的标签页"></div>
+    <div id="empty" class="empty" hidden><span id="empty-icon" aria-hidden="true"></span><strong>没有找到匹配的标签</strong><p>试试其他标题或域名关键词</p><button id="clear-search" class="text-button">清除搜索</button></div>
+  </main>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="help-dialog">
+    <div class="dialog-header"><h2>把标签面板放到左边</h2><button id="close-help" class="icon-button" aria-label="关闭说明"></button></div>
+    <p>Chrome 的侧栏位置由浏览器统一设置。</p>
+    <ol><li>打开 Chrome 设置 → <strong>外观</strong></li><li>找到「侧边栏」或「侧面板位置」</li><li>选择 <strong>在左侧显示</strong></li></ol>
+    <p class="muted">也可以在设置中搜索「侧」。不同版本的选项名称可能略有不同。</p>
+    <button id="open-settings" class="primary-button">打开外观设置</button>
+    <div class="help-notes"><strong>使用提示</strong><p>侧栏会实时按完整域名归类，不同子域名单独展示。顶部整理会重组所选窗口的所有非固定标签，固定标签保留原位。</p><p>自动整理默认关闭；开启后会应用于所有普通窗口，只增量归组，保留现有组顺序与自定义分组。点击标签切换页面，悬停可复制、移到新窗口、置顶、取消置顶或关闭标签，拖拽可调整组内顺序。按 / 搜索，Esc 清除搜索。</p></div>
+  </dialog>
+  <dialog id="confirm-dialog"><h2 id="confirm-title">关闭域名下的标签？</h2><p id="confirm-description"></p><div class="dialog-actions"><button id="cancel-close" class="secondary-button">取消</button><button id="confirm-close" class="danger-button">关闭标签</button></div></dialog>
+  <dialog id="duplicates-dialog"><h2>关闭重复标签？</h2><p id="duplicates-description"></p><div class="dialog-actions"><button id="cancel-duplicates" class="secondary-button">取消</button><button id="confirm-duplicates" class="danger-button">关闭重复标签</button></div></dialog>
+  <script type="module" src="panel.js"></script>
+</body>
+</html>
